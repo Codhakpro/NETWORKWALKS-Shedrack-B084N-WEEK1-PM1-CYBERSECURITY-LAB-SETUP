@@ -1,4 +1,3 @@
-::: {align="center"}
 # 🔐 Cybersecurity Lab Setup
 
 ### Networkwalks · Week 1 Project
@@ -36,19 +35,21 @@ needed.
 
   Component                 Configuration
   ------------------------- ---------------------------
+  ```text
   Host operating system     Windows 11
   Virtualization platform   Oracle VirtualBox
   Guest operating system    Kali Linux
   Virtual machine name      My Kali
   Allocated memory          2048 MB
   Virtual network mode      NAT Network
-  NAT Network name          `NatNetwork`
-  IPv4 network prefix       `10.0.0.0/24`
-  Kali IPv4 address         `10.0.0.2/24`
-  Default gateway           `10.0.0.1`
-  DNS server                `1.1.1.1`
-  Network adapter           Intel PRO/1000 MT Desktop
+  NAT Network name          NatNetwork
+  IPv4 network prefix       10.0.0.0/24
+  Kali IPv4 address         10.0.0.2/24
+  Default gateway           10.0.0.1
+  DNS server                1.1.1.1
+  Network adapter           Intel PRO/1000 MT Desktop\
   Promiscuous mode          Deny
+  ```
 
 > **Addressing note:** DHCP is enabled on the VirtualBox NAT Network.
 > The Kali guest was configured with the static IPv4 settings shown
@@ -70,7 +71,7 @@ another while providing outbound network connectivity through network
 address translation.
 
 ![VirtualBox NAT Network
-configuration](screenshots/01-virtualbox-nat-network.png)
+configuration](01-virtualbox-nat-network.png)
 
 ### 2. Configure the Kali Linux virtual machine
 
@@ -87,11 +88,11 @@ newly created NAT Network.
   Cable connected    Enabled
 
 ![Kali VM network adapter
-configuration](screenshots/02-kali-network-adapter.png)
+configuration](02-kali-network-adapter.png)
 
 The virtual machine was allocated **2048 MB of RAM**.
 
-![Kali VM resource settings](screenshots/03-kali-vm-resources.png)
+![Kali VM resource settings](03-kali-vm-resources.png)
 
 ### 3. Configure the Kali IPv4 settings
 
@@ -109,7 +110,7 @@ The screenshot below records the IPv4 settings applied to the
 `Wired connection 1` connection.
 
 ![Kali static IPv4
-configuration](screenshots/04-kali-static-ip-settings.png)
+configuration](04-kali-static-ip-settings.png)
 
 ## Verification
 
@@ -137,10 +138,10 @@ The captured terminal output shows **4 packets transmitted, 4 received,
 and 0% packet loss** for each of the three tests. The successful domain
 test also confirms that DNS resolution was working during the test.
 
-![Kali Linux desktop](screenshots/05-kali-desktop.png)
+![Kali Linux desktop](05-kali-desktop.png)
 
 ![Successful gateway, external IP and DNS connectivity
-tests](screenshots/06-connectivity-tests.png)
+tests](06-connectivity-tests.png)
 
 ## Recovery Point
 
@@ -192,8 +193,6 @@ assess.
 
 ------------------------------------------------------------------------
 
-::: {align="center"}
-**Author:** Codhak Pro\
+**Author:** Shedrack odufalu\
 **Program:** Networkwalks Cybersecurity Internship\
 **Project:** Week 1 --- Cybersecurity & Pentesting Lab Setup
-:::
